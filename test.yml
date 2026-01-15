@@ -1,0 +1,20 @@
+name: Test Action with Email Step
+
+on:
+  workflow_dispatch:  # allows manual trigger from GitHub UI
+  push:
+    branches:
+      - main  # triggers on push to main branch
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 24f2006018@ds.study.iitm.ac.in
+        run: |
+          echo "Hello, world!"
+          echo "This step contains your email address in the name."
+
+      - name: Final step
+        run: echo "Workflow completed successfully!"
