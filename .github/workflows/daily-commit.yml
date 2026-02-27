@@ -2,9 +2,11 @@ name: Daily Auto Commit
 
 on:
   schedule:
-    # Runs daily at 02:30 UTC (specific hour & minute, no wildcards)
-    - cron: '22 2 * * *'
-  workflow_dispatch:  # allows manual trigger
+    - cron: '25 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # 👈 THIS FIXES THE 403 ERROR
 
 jobs:
   auto-commit:
